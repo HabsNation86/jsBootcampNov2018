@@ -29,4 +29,4 @@ let fahrToObj = function(fahr){
   }
 }
 
-console.log(fahrToObj
+console.log(fahrToObj)
