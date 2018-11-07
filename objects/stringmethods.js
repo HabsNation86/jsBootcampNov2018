@@ -28,15 +28,28 @@
 
 // console.log(isValid('asdfp'))
 // console.log(isValid('abc33444djkdfjkdjk'))
-// console.log(isValid('aspassword768'))
+// console.log(isValid('password'))
 
-let isPallandrome = function(str){
-  let reverse = str.split('').reverse().join('')
-  if (reverse === str){
-    return true
+// let isPallandrome = function(str){
+//   let reverse = str.split('').reverse().join('')
+//   if (reverse === str){
+//     return true
+//   }else {
+//     return false
+//   }
+// }
+
+// console.log(isPallandrome('laval'))
+
+
+let getAge = function(birthYear) {
+  let currentYear = 2018
+  if (birthYear >= currentYear){
+    return 'Get Real'
   }else {
-    return false
+    return currentYear - birthYear
   }
+
 }
 
-console.log(isPallandrome('laval'))
+console.log(getAge(2026))
