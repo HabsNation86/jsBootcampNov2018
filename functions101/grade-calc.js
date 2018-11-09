@@ -5,8 +5,8 @@
 
 
 
-let gradeCalc = function(score, total){
-  let grade = (score/total) * 100
+const gradeCalc = function(score, total){
+  const grade = (score/total) * 100
   if (grade >=90){
     return `You got a A (${grade}%)`
   } else if (grade >=80 ){

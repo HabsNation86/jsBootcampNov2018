@@ -1,4 +1,13 @@
-const notes = ['Hamster', 'Note2', 'Note3']
+const notes = [{
+  title: 'book1',
+  body: 'random info'
+},{
+  title: 'book2',
+  body: 'generic information'
+},{
+  title:'book3',
+  body:' Cant get a job'
+}];
 // console.log(notes)
 
 // // length of array
@@ -19,5 +28,26 @@ const notes = ['Hamster', 'Note2', 'Note3']
 // notes.shift()
 // console.log(notes)
 
-notes.splice(1,1,0, 'new second item')
-console.log(notes)
+// notes.splice(1,1,0, 'new second item')
+
+
+
+// notes.forEach(function(){
+//   console.log(notes)
+// })
+
+
+// for (let i = notes.length-1; i >= 0; i--){
+//   console.log(notes[i])
+// }
+
+
+// looking for an element in array of objects
+const index = notes.findIndex(function(note, index) {
+  return note.body === 'generic information'
+})
+console.log(index)
+
+//  important note, use "indexOf" when working with array or strings
+
+

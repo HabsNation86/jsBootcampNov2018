@@ -12,13 +12,10 @@ let restaurant = {
   },
   seatParty : function(partysize){
     restaurant.guestCount = restaurant.guestCount + partysize
-
   },
   removeParty : function (partysize){
     restaurant.guestCount = restaurant.guestCount - partysize
   }
-
-
 }
 
 restaurant.seatParty(72)
