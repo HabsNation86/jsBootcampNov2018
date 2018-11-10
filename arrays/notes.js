@@ -7,7 +7,7 @@ const notes = [{
 },{
   title:'book3',
   body:' Cant get a job'
-}];
+}]
 // console.log(notes)
 
 // // length of array
@@ -43,11 +43,31 @@ const notes = [{
 
 
 // looking for an element in array of objects
-const index = notes.findIndex(function(note, index) {
-  return note.body === 'generic information'
-})
-console.log(index)
+// const index = notes.findIndex(function(note, index) {
+//   return note.body === 'generic information'
+// })
+// console.log(index)
 
 //  important note, use "indexOf" when working with array or strings
 
 
+// Filtering Array
+// const findNotes = function(notes, query){
+// return notes.filter(function(note,index) {
+//   const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
+//   const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
+//   return isTitleMatch || isBodyMatch
+
+// })
+// }
+// console.log(findNotes(notes, 'book'))
+
+// Sorting Array
+
+console.log( 'a' < 'A')
+
+const sortNotes = function(arr){
+  arr.sort(function(a,b){
+
+  })
+}

@@ -3,26 +3,39 @@
 // print the first and 2nd to last items and have ex. todo : walk the dog
 
 
-const item = ['Dog','Cat','Hamster',34,'tree'];
+const todos = [{
+  text: 'order cat food',
+  completed : false
+},{
+  text: 'clean kitchen',
+  completed : true
+},{
+  text: 'Buy Food',
+  completed: false
+},{
+  text: 'walk dog',
+  completed: true
+}]
 
-// console.log(`you have ${item.length} items`)
 
-// console.log('The first item is:', item[0])
-// console.log('The fourth item is:', item[3])
+// console.log(`you have ${todos.length} items`)
+
+// console.log('The first item is:', todos[0])
+// console.log('The fourth item is:', todos[3])
 
 
-// delete 3rd item from item
+// delete 3rd item from todos
 
-item.splice(2,1)
-console.log(item)
+// todos.splice(2,1)
+// console.log(todos)
 
-// //  add new item at the end
-item.push('Doberman')
-console.log(item)
+// // //  add new item at the end
+// todos.push('Doberman')
+// console.log(item)
 
-// //  remove the first item from list
-item.shift()
-console.log(item)
+// // //  remove the first item from list
+// todos.shift()
+// console.log(item)
 
 
 // const capThird = function(str){
@@ -40,21 +53,37 @@ console.log(item)
 
 
 
-// forEach
+// // forEach
 
-item.forEach(function(item, index){
-  const num = index +1
-  console.log(`${num}. ${item}`)
-})
+// todos.forEach(function(item, index){
+//   const num = index +1
+//   console.log(`${num}. ${item}`)
+// })
 
-//  FOR LOOP
+// //  FOR LOOP
 
-for (let i = 0; i <= item.length - 1; i++){
-  console.log(`${i + 1}. ${item[i]}`)
+// for (let i = 0; i <= todos.length - 1; i++){
+//   console.log(`${i + 1}. ${todos[i]}`)
+// }
+
+// console.log(todos)
+// console.log(todos.indexOf('tree'))
+
+
+const getThingsToDo = function(todos){
+  return todos.filter(function(todo){
+    return todo.completed === false
+  })
 }
 
-console.log(item)
-console.log(item.indexOf('tree'))
+
+
+
+console.log(getThingsToDo(todos))
+
+
+
+
 
 
 
