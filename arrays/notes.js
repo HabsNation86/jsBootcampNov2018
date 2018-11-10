@@ -64,10 +64,5 @@ const notes = [{
 
 // Sorting Array
 
-console.log( 'a' < 'A')
 
-const sortNotes = function(arr){
-  arr.sort(function(a,b){
 
-  })
-}

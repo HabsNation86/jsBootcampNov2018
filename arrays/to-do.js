@@ -70,16 +70,18 @@ const todos = [{
 // console.log(todos.indexOf('tree'))
 
 
-const getThingsToDo = function(todos){
-  return todos.filter(function(todo){
-    return todo.completed === false
-  })
-}
+// const getThingsToDo = function(todos){
+//   return todos.filter(function(todo){
+//     return todo.completed === false
+//   })
+// }
 
 
 
 
-console.log(getThingsToDo(todos))
+// console.log(getThingsToDo(todos))
+
+
 
 
 

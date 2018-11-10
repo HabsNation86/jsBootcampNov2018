@@ -1,6 +1,7 @@
 const account = {
   name: 'Andrew Mead',
   expenses: [],
+  income: [],
   addExpense: function(description,amount){
     this.expenses.push({
       description: description,
@@ -9,23 +10,42 @@ const account = {
   },
   getAccountSummary: function(){
     let totalExpenses = 0
+    let totalIncome = 0
+    let accountBalance = 0
+
     this.expenses.forEach(function(expense){
       totalExpenses = totalExpenses + expense.amount
     })
-    return `${this.name} has ${totalExpenses} in expenses`
+    this.income.forEach(function(income){
+      totalIncome = totalIncome + income.amount
+    })
+
+    accountBalance = totalIncome - totalExpenses
+
+
+    return `${this.name} has ${accountBalance} , $${totalIncome}`
+  },
+  addIncome: function(description,amount){
+    this.income.push({
+      description: description,
+      amount: amount
+    })
   }
 }
 
 
 
 
-//  Expense => description, amount
-// addExpense => description, amount
-// getAccountSummary => total up all expenses => Andrew mead has $1250 in expenses.
-
-
-
 account.addExpense('Rent', 950)
 account.addExpense('Coffee', 2)
+account.addIncome('Coffee', 2)
 console.log(account.getAccountSummary())
+
+
+// Part 2
+
+// add income array to account
+//  addIncome => description and amount
+// tweak getASummary
+//  print out andrew mead has getAccountSummary,
 
