@@ -10,3 +10,10 @@ const p = document.querySelectorAll('p')
   p.textContent = 'Rambo'
 
 })
+
+
+//  Add a new element
+
+const newParagraph = document.createElement('p')
+newParagraph.textContent = 'This is a new element from javascript'
+document.querySelector('body').appendChild(newParagraph)
